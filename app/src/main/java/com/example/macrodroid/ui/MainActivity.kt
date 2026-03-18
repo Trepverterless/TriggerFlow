@@ -35,6 +35,7 @@ class MainActivity : AppCompatActivity() {
         private const val REQUEST_NOTIFICATION_PERMISSION = 101
         private const val PREFS_NAME = "macro_prefs"
         private const val KEY_XIAOMI_DIALOG_SHOWN = "xiaomi_dialog_shown"
+        private const val GITHUB_URL = "https://github.com/Trepverterless/TriggerFlow"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -218,6 +219,10 @@ class MainActivity : AppCompatActivity() {
                 showHelp()
                 true
             }
+            R.id.action_about -> {
+                showAbout()
+                true
+            }
             else -> super.onOptionsItemSelected(item)
         }
     }
@@ -314,6 +319,42 @@ class MainActivity : AppCompatActivity() {
             .setTitle(R.string.help_title)
             .setMessage(message)
             .setPositiveButton(R.string.cancel) { dialog, _ ->
+                dialog.dismiss()
+            }
+            .show()
+    }
+    
+    private fun showAbout() {
+        val versionName = try {
+            packageManager.getPackageInfo(packageName, 0).versionName
+        } catch (e: Exception) {
+            "1.0.0"
+        }
+        
+        val message = """
+${getString(R.string.about_description)}
+
+${getString(R.string.about_features)}
+
+${getString(R.string.about_version)}: $versionName
+
+${getString(R.string.about_github)}:
+$GITHUB_URL
+        """.trimIndent()
+        
+        AlertDialog.Builder(this)
+            .setTitle(R.string.about_title)
+            .setMessage(message)
+            .setPositiveButton(getString(R.string.visit_github)) { dialog, _ ->
+                try {
+                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse(GITHUB_URL))
+                    startActivity(intent)
+                } catch (e: Exception) {
+                    Toast.makeText(this, "无法打开链接", Toast.LENGTH_SHORT).show()
+                }
+                dialog.dismiss()
+            }
+            .setNegativeButton(R.string.cancel) { dialog, _ ->
                 dialog.dismiss()
             }
             .show()

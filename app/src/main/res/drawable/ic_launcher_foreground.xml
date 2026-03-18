@@ -5,42 +5,38 @@
     android:viewportWidth="108"
     android:viewportHeight="108">
 
-    <!-- Background circle -->
+    <!-- Background circle (more rounded) -->
     <path
-        android:fillColor="#1A237E"
-        android:pathData="M54,54m-40,0a40,40 0,1 1,80 0a40,40 0,1 1,-80 0"/>
+        android:fillColor="#6200EE"
+        android:pathData="M54,54m-42,0a42,42 0,1 1,84 0a42,42 0,1 1,-84 0"/>
 
-    <!-- Flow arrow 1 (top) -->
+    <!-- Flow arrow 1 (top) - rounded -->
     <path
         android:fillColor="#FFFFFF"
-        android:pathData="M54,20L65,32L58,32L58,44L50,44L50,32L43,32Z"
-        android:strokeWidth="1"/>
+        android:pathData="M50,18L58,18Q62,18 62,22L62,34Q62,38 58,38L56,38L56,44L52,44L52,38L50,38Q46,38 46,34L46,22Q46,18 50,18Z"/>
 
-    <!-- Flow arrow 2 (left) -->
+    <!-- Flow arrow 2 (left) - rounded -->
     <path
         android:fillColor="#00BCD4"
-        android:pathData="M28,54L40,43L40,50L52,50L52,58L40,58L40,65Z"
-        android:strokeWidth="1"/>
+        android:pathData="M18,50L18,58Q18,62 22,62L34,62Q38,62 38,58L38,56L44,56L44,52L38,52L38,50Q38,46 34,46L22,46Q18,46 18,50Z"/>
 
-    <!-- Flow arrow 3 (right) -->
+    <!-- Flow arrow 3 (right) - rounded -->
     <path
-        android:fillColor="#2196F3"
-        android:pathData="M80,54L68,65L68,58L56,58L56,50L68,50L68,43Z"
-        android:strokeWidth="1"/>
+        android:fillColor="#03DAC5"
+        android:pathData="M90,50L90,58Q90,62 86,62L74,62Q70,62 70,58L70,56L64,56L64,52L70,52L70,50Q70,46 74,46L86,46Q90,46 90,50Z"/>
 
-    <!-- Flow arrow 4 (bottom) -->
+    <!-- Flow arrow 4 (bottom) - rounded -->
     <path
         android:fillColor="#FFFFFF"
-        android:pathData="M54,88L43,76L50,76L50,64L58,64L58,76L65,76Z"
-        android:strokeWidth="1"/>
+        android:pathData="M50,90L58,90Q62,90 62,86L62,74Q62,70 58,70L56,70L56,64L52,64L52,70L50,70Q46,70 46,74L46,86Q46,90 50,90Z"/>
 
-    <!-- Center circle (trigger point) -->
+    <!-- Center circle (trigger point) - larger and softer -->
     <path
         android:fillColor="#FFFFFF"
-        android:pathData="M54,54m-8,0a8,8 0,1 1,16 0a8,8 0,1 1,-16 0"/>
+        android:pathData="M54,54m-12,0a12,12 0,1 1,24 0a12,12 0,1 1,-24 0"/>
 
     <!-- Inner circle -->
     <path
-        android:fillColor="#1A237E"
-        android:pathData="M54,54m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0"/>
+        android:fillColor="#6200EE"
+        android:pathData="M54,54m-6,0a6,6 0,1 1,12 0a6,6 0,1 1,-12 0"/>
 </vector>

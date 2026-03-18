@@ -64,11 +64,6 @@
             android:exported="false"
             android:parentActivityName=".ui.MainActivity" />
 
-        <activity
-            android:name=".ui.XiaomiPermissionGuideActivity"
-            android:exported="false"
-            android:parentActivityName=".ui.MainActivity" />
-
         <service
             android:name=".domain.MacroService"
             android:exported="false"

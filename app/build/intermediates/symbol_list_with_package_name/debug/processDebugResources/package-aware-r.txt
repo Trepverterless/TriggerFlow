@@ -3258,6 +3258,7 @@ id accessibility_custom_action_9
 id actionDown
 id actionDownUp
 id actionUp
+id action_about
 id action_bar
 id action_bar_activity_content
 id action_bar_container
@@ -4034,6 +4035,13 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string about
+string about_description
+string about_developer
+string about_features
+string about_github
+string about_title
+string about_version
 string action_count
 string action_help
 string action_list
@@ -4308,6 +4316,7 @@ string v7_preference_off
 string v7_preference_on
 string vibrate
 string vibration
+string visit_github
 string volume
 string volume_level_range
 string wifi

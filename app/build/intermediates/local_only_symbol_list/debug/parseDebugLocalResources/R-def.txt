@@ -52,6 +52,7 @@ color trigger_wifi
 color warning
 color white
 drawable ic_launcher_foreground
+id action_about
 id action_help
 id action_permission_guide
 id appBarLayout
@@ -127,6 +128,13 @@ menu bottom_nav_menu
 menu menu_main
 mipmap ic_launcher
 mipmap ic_launcher_round
+string about
+string about_description
+string about_developer
+string about_features
+string about_github
+string about_title
+string about_version
 string action_count
 string action_help
 string action_list
@@ -255,6 +263,7 @@ string turn_on_screen
 string unlock_screen
 string vibrate
 string vibration
+string visit_github
 string volume
 string volume_level_range
 string wifi

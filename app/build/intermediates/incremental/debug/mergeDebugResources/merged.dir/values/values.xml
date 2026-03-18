@@ -723,7 +723,7 @@
     <color name="foreground_material_light">@android:color/black</color>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
     <color name="highlighted_text_material_light">#66009688</color>
-    <color name="ic_launcher_background">#1A237E</color>
+    <color name="ic_launcher_background">#6200EE</color>
     <color name="icon_flow_blue">#FF2196F3</color>
     <color name="icon_flow_cyan">#FF00BCD4</color>
     <color name="icon_flow_white">#FFFFFFFF</color>
@@ -2039,6 +2039,13 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with <ns2:g example="Mail" id="application_name">%s</ns2:g></string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
+    <string name="about">关于</string>
+    <string name="about_description">一款强大的 Android 自动化工具，让您轻松创建和管理自动化任务。</string>
+    <string name="about_developer">开发者</string>
+    <string name="about_features">主要特性：\n• 支持多种触发器类型\n• 丰富的动作选择\n• 简洁直观的用户界面\n• 后台服务稳定运行</string>
+    <string name="about_github">GitHub 仓库</string>
+    <string name="about_title">关于 TriggerFlow</string>
+    <string name="about_version">版本</string>
     <string name="action_count">个动作</string>
     <string name="action_help">帮助</string>
     <string name="action_list">动作列表</string>
@@ -2325,6 +2332,7 @@
     <string name="v7_preference_on">ON</string>
     <string name="vibrate">振动</string>
     <string name="vibration">振动</string>
+    <string name="visit_github">访问 GitHub</string>
     <string name="volume">音量</string>
     <string name="volume_level_range">音量级别 (0-100)</string>
     <string name="wifi">WiFi</string>

@@ -44,6 +44,10 @@
         "source": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-main-44:\\mipmap-xxxhdpi\\ic_launcher.xml"
     },
     {
+        "merged": "com.example.macrodroid.app-debug-42:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.macrodroid.app-main-44:/drawable/ic_launcher_foreground.xml"
+    },
+    {
         "merged": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-debug-42:\\mipmap-xxhdpi_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-main-44:\\mipmap-xxhdpi\\ic_launcher_round.xml"
     },
@@ -106,10 +110,6 @@
     {
         "merged": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-debug-42:\\menu_menu_main.xml.flat",
         "source": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-main-44:\\menu\\menu_main.xml"
-    },
-    {
-        "merged": "com.example.macrodroid.app-debug-42:/menu_menu_main.xml.flat",
-        "source": "com.example.macrodroid.app-main-44:/menu/menu_main.xml"
     },
     {
         "merged": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-debug-42:\\layout_activity_action_selection.xml.flat",

@@ -142,4 +142,14 @@
 
     <!-- Help -->
     <string name="help_title">使用帮助</string>
+
+    <!-- About -->
+    <string name="about">关于</string>
+    <string name="about_title">关于 TriggerFlow</string>
+    <string name="about_description">一款强大的 Android 自动化工具，让您轻松创建和管理自动化任务。</string>
+    <string name="about_features">主要特性：\n• 支持多种触发器类型\n• 丰富的动作选择\n• 简洁直观的用户界面\n• 后台服务稳定运行</string>
+    <string name="about_github">GitHub 仓库</string>
+    <string name="about_version">版本</string>
+    <string name="about_developer">开发者</string>
+    <string name="visit_github">访问 GitHub</string>
 </resources>

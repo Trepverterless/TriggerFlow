@@ -75,10 +75,6 @@
             android:name="com.example.macrodroid.ui.TriggerLogActivity"
             android:exported="false"
             android:parentActivityName="com.example.macrodroid.ui.MainActivity" />
-        <activity
-            android:name="com.example.macrodroid.ui.XiaomiPermissionGuideActivity"
-            android:exported="false"
-            android:parentActivityName="com.example.macrodroid.ui.MainActivity" />
 
         <service
             android:name="com.example.macrodroid.domain.MacroService"
