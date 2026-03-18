@@ -1,10 +1,8 @@
 # 自动化助手 (TriggerFlow)
 
 <div align="center">
-![Android](https://img.shields.io/badge/Android-7.0%2B-green.svg)
-![Kotlin](https://img.shields.io/badge/Kotlin-1.9.22-blue.svg)
-![API](https://img.shields.io/badge/API-24%2B-brightgreen.svg)
-![License](https://img.shields.io/badge/License-MIT-orange.svg)
+
+![Android](https://img.shields.io/badge/Android-7.0%2B-green.svg) ![Kotlin](https://img.shields.io/badge/Kotlin-1.9.22-blue.svg) ![API](https://img.shields.io/badge/API-24%2B-brightgreen.svg) ![License](https://img.shields.io/badge/License-MIT-orange.svg)
 
 **一款功能强大的 Android 自动化工具，让您的手机更智能**
 
