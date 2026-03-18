@@ -1,7 +1,6 @@
-# 自动化助手 (AutoMacro)
+# 自动化助手 (TriggerFlow)
 
 <div align="center">
-
 ![Android](https://img.shields.io/badge/Android-7.0%2B-green.svg)
 ![Kotlin](https://img.shields.io/badge/Kotlin-1.9.22-blue.svg)
 ![API](https://img.shields.io/badge/API-24%2B-brightgreen.svg)
@@ -17,7 +16,7 @@
 
 ## 📱 项目简介
 
-**自动化助手** 是一款类似 Macrodroid 的 Android 自动化应用，通过简单的图形界面配置触发器和动作，实现手机的智能化操作。无需编程知识，即可创建复杂的自动化任务。
+**TriggerFlow** 是一款类似 Macrodroid 的 Android 自动化应用，通过简单的图形界面配置触发器和动作，实现手机的智能化操作。无需编程知识，即可创建复杂的自动化任务。
 
 ### 核心特性
 
@@ -71,35 +70,6 @@
 ---
 
 ## 🏗️ 技术架构
-
-### 架构设计
-
-```
-┌─────────────────────────────────────────┐
-│              用户界面层 (UI)              │
-│  MainActivity / MacroDetailActivity     │
-│  TriggerSelectionActivity               │
-│  ActionSelectionActivity                │
-└─────────────────────────────────────────┘
-                    ↓
-┌─────────────────────────────────────────┐
-│            业务逻辑层 (Domain)           │
-│         MacroService (前台服务)          │
-│         ActionExecutor (动作执行)        │
-└─────────────────────────────────────────┘
-                    ↓
-┌─────────────────────────────────────────┐
-│            触发器层 (Trigger)            │
-│  TimeTriggerReceiver / SmsTriggerReceiver│
-│  LocationTriggerReceiver                │
-└─────────────────────────────────────────┘
-                    ↓
-┌─────────────────────────────────────────┐
-│             数据层 (Data)                │
-│  MacroRepository / TriggerLogRepository │
-│  SharedPreferences + Serialization      │
-└─────────────────────────────────────────┘
-```
 
 ### 技术栈
 
@@ -538,12 +508,6 @@ copies or substantial portions of the Software.
 ```
 
 ---
-
-## 📞 联系方式
-
-- 项目主页：[GitHub](https://github.com/yourusername/automacro)
-- 问题反馈：[Issues](https://github.com/yourusername/automacro/issues)
-- 邮箱：your.email@example.com
 
 ---
 
