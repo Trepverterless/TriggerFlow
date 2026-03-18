@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/select_action_type"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNotification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/send_notification" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnWiFi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/control_wifi" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBluetooth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/control_bluetooth" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnVolume"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/adjust_volume" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBrightness"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/adjust_brightness" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnVibration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/vibrate" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAlertSound"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/alert_sound" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLaunchApp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/launch_app" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnScreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/control_screen" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/control_data" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnScreenshot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/take_screenshot" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSendSMS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/send_sms" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
