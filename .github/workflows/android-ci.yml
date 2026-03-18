@@ -6,6 +6,9 @@ on:
   pull_request:
     branches: [ "main", "master", "develop" ]
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -21,17 +24,17 @@ jobs:
         distribution: 'temurin'
         cache: gradle
 
-    - name: Grant execute permission for gradlew
+    - name: Setup Android SDK
+      uses: android-actions/setup-android@v3
+
+    - name: Accept licenses
+      run: yes | sdkmanager --licenses
+
+    - name: Grant execute permission
       run: chmod +x gradlew
 
-    - name: Build with Gradle
+    - name: Build + Test + APK
       run: ./gradlew build
-
-    - name: Run unit tests
-      run: ./gradlew test
-
-    - name: Build Debug APK
-      run: ./gradlew assembleDebug
 
     - name: Upload Debug APK
       uses: actions/upload-artifact@v4
@@ -39,9 +42,9 @@ jobs:
         name: app-debug
         path: app/build/outputs/apk/debug/app-debug.apk
 
-    - name: Upload build reports
-      uses: actions/upload-artifact@v4
+    - name: Upload reports
       if: always()
+      uses: actions/upload-artifact@v4
       with:
         name: build-reports
         path: app/build/reports/
