@@ -4,16 +4,18 @@ package com.example.macrodroid.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.Toolbar;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.macrodroid.R;
+import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.button.MaterialButton;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -23,10 +25,13 @@ public final class ActivityTriggerLogBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final AppBarLayout appBarLayout;
+
+  @NonNull
   public final BottomNavigationView bottomNavigation;
 
   @NonNull
-  public final Button btnClear;
+  public final MaterialButton btnClear;
 
   @NonNull
   public final TextView emptyView;
@@ -34,14 +39,20 @@ public final class ActivityTriggerLogBinding implements ViewBinding {
   @NonNull
   public final RecyclerView recyclerView;
 
+  @NonNull
+  public final Toolbar toolbar;
+
   private ActivityTriggerLogBinding(@NonNull ConstraintLayout rootView,
-      @NonNull BottomNavigationView bottomNavigation, @NonNull Button btnClear,
-      @NonNull TextView emptyView, @NonNull RecyclerView recyclerView) {
+      @NonNull AppBarLayout appBarLayout, @NonNull BottomNavigationView bottomNavigation,
+      @NonNull MaterialButton btnClear, @NonNull TextView emptyView,
+      @NonNull RecyclerView recyclerView, @NonNull Toolbar toolbar) {
     this.rootView = rootView;
+    this.appBarLayout = appBarLayout;
     this.bottomNavigation = bottomNavigation;
     this.btnClear = btnClear;
     this.emptyView = emptyView;
     this.recyclerView = recyclerView;
+    this.toolbar = toolbar;
   }
 
   @Override
@@ -71,6 +82,12 @@ public final class ActivityTriggerLogBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.appBarLayout;
+      AppBarLayout appBarLayout = ViewBindings.findChildViewById(rootView, id);
+      if (appBarLayout == null) {
+        break missingId;
+      }
+
       id = R.id.bottomNavigation;
       BottomNavigationView bottomNavigation = ViewBindings.findChildViewById(rootView, id);
       if (bottomNavigation == null) {
@@ -78,7 +95,7 @@ public final class ActivityTriggerLogBinding implements ViewBinding {
       }
 
       id = R.id.btnClear;
-      Button btnClear = ViewBindings.findChildViewById(rootView, id);
+      MaterialButton btnClear = ViewBindings.findChildViewById(rootView, id);
       if (btnClear == null) {
         break missingId;
       }
@@ -95,8 +112,14 @@ public final class ActivityTriggerLogBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityTriggerLogBinding((ConstraintLayout) rootView, bottomNavigation, btnClear,
-          emptyView, recyclerView);
+      id = R.id.toolbar;
+      Toolbar toolbar = ViewBindings.findChildViewById(rootView, id);
+      if (toolbar == null) {
+        break missingId;
+      }
+
+      return new ActivityTriggerLogBinding((ConstraintLayout) rootView, appBarLayout,
+          bottomNavigation, btnClear, emptyView, recyclerView, toolbar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

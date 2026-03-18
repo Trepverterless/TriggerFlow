@@ -1,5 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Primary Colors -->
+    <color name="primary">#FF6200EE</color>
+    <color name="primary_dark">#FF3700B3</color>
+    <color name="primary_light">#FF9E47FF</color>
+    <color name="accent">#FF03DAC5</color>
+    <color name="accent_dark">#FF018786</color>
+
+    <!-- Background Colors -->
+    <color name="background">#FFF5F5F5</color>
+    <color name="background_dark">#FF121212</color>
+    <color name="surface">#FFFFFFFF</color>
+    <color name="surface_dark">#FF1E1E1E</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#DE000000</color>
+    <color name="text_secondary">#8A000000</color>
+    <color name="text_primary_dark">#FFFFFFFF</color>
+    <color name="text_secondary_dark">#B3FFFFFF</color>
+
+    <!-- Status Colors -->
+    <color name="success">#FF4CAF50</color>
+    <color name="warning">#FFFF9800</color>
+    <color name="error">#FFB00020</color>
+    <color name="info">#FF2196F3</color>
+
+    <!-- Trigger Type Colors -->
+    <color name="trigger_time">#FF6200EE</color>
+    <color name="trigger_battery">#FFFF5722</color>
+    <color name="trigger_sms">#FF4CAF50</color>
+    <color name="trigger_location">#FF2196F3</color>
+    <color name="trigger_wifi">#FF00BCD4</color>
+    <color name="trigger_bluetooth">#FF9C27B0</color>
+    <color name="trigger_screen">#FFFF9800</color>
+
+    <!-- Action Type Colors -->
+    <color name="action_notification">#FF6200EE</color>
+    <color name="action_wifi">#FF00BCD4</color>
+    <color name="action_bluetooth">#FF9C27B0</color>
+    <color name="action_volume">#FFFF5722</color>
+    <color name="action_brightness">#FFFFC107</color>
+    <color name="action_vibration">#FF795548</color>
+    <color name="action_app">#FF4CAF50</color>
+    <color name="action_screen">#FFFF9800</color>
+    <color name="action_data">#FF2196F3</color>
+
+    <!-- Basic Colors -->
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
@@ -7,12 +53,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="primary">#FF6200EE</color>
-    <color name="primary_dark">#FF3700B3</color>
-    <color name="accent">#FF03DAC5</color>
-    <color name="background">#FFFFFFFF</color>
-    <color name="surface">#FFFFFFFF</color>
-    <color name="error">#FFB00020</color>
+
+    <!-- Material Design Colors -->
     <color name="on_primary">#FFFFFFFF</color>
     <color name="on_secondary">#FF000000</color>
     <color name="on_background">#FF000000</color>
@@ -23,4 +65,8 @@
     <color name="icon_flow_blue">#FF2196F3</color>
     <color name="icon_flow_cyan">#FF00BCD4</color>
     <color name="icon_flow_white">#FFFFFFFF</color>
+
+    <!-- Card Background -->
+    <color name="card_background">#FFFFFFFF</color>
+    <color name="card_background_dark">#FF2D2D2D</color>
 </resources>

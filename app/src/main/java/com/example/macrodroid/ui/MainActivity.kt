@@ -10,6 +10,7 @@ import android.os.Bundle
 import android.provider.Settings
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -42,6 +43,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         repository = MacroRepository.getInstance(this)
+
+        // Setup Toolbar
+        setSupportActionBar(binding.toolbar)
+        supportActionBar?.title = getString(R.string.app_name)
 
         MacroService.startService(this)
 
@@ -151,7 +156,6 @@ class MainActivity : AppCompatActivity() {
             
             if (!hasShownDialog) {
                 showXiaomiPermissionDialog()
-                // 记录已显示过对话框
                 prefs.edit().putBoolean(KEY_XIAOMI_DIALOG_SHOWN, true).apply()
             }
         }
@@ -159,63 +163,159 @@ class MainActivity : AppCompatActivity() {
     
     private fun showXiaomiPermissionDialog() {
         AlertDialog.Builder(this)
-            .setTitle("小米设备权限设置")
-            .setMessage("在小米设备上，应用需要额外的权限才能正常工作：\n\n" +
-                       "1. 自启动权限：允许应用在后台运行\n" +
-                       "2. 后台弹出界面权限：允许应用显示界面\n" +
-                       "3. 省电策略：设置为无限制\n" +
-                       "4. 震动权限：允许应用震动\n\n" +
-                       "是否前往设置？")
-            .setPositiveButton("前往设置") { _, _ ->
-                openXiaomiPermissionSettings()
+            .setTitle(R.string.xiaomi_permission_guide)
+            .setMessage("检测到您使用的是小米设备，为确保应用正常运行，请在设置中开启以下权限：\n\n" +
+                    "1. 自启动权限\n" +
+                    "2. 后台弹出界面权限\n" +
+                    "3. 省电策略选择无限制\n\n" +
+                    "这些权限可以确保触发器在后台正常工作。")
+            .setPositiveButton("前往设置") { dialog, _ ->
+                try {
+                    val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS).apply {
+                        data = Uri.parse("package:$packageName")
+                    }
+                    startActivity(intent)
+                } catch (e: Exception) {
+                    Toast.makeText(this, "无法打开设置", Toast.LENGTH_SHORT).show()
+                }
+                dialog.dismiss()
             }
-            .setNegativeButton("稍后设置", null)
+            .setNegativeButton("稍后提醒") { dialog, _ ->
+                dialog.dismiss()
+            }
             .show()
-    }
-    
-    private fun openXiaomiPermissionSettings() {
-        try {
-            // 尝试打开小米安全中心的应用权限设置
-            val intent = Intent().apply {
-                action = Settings.ACTION_APPLICATION_DETAILS_SETTINGS
-                data = Uri.fromParts("package", packageName, null)
-            }
-            startActivity(intent)
-            
-            // 提示用户需要开启的权限
-            Toast.makeText(this, 
-                "请在权限管理中开启：自启动、后台弹出界面、震动，并在省电策略中选择无限制",
-                Toast.LENGTH_LONG).show()
-        } catch (e: Exception) {
-            // 如果无法打开，提示用户手动设置
-            Toast.makeText(this, 
-                "无法自动打开设置，请手动前往：设置 -> 应用管理 -> ${getString(R.string.app_name)} -> 权限", 
-                Toast.LENGTH_LONG).show()
-        }
     }
 
     private fun loadMacros() {
         lifecycleScope.launch {
             repository.macros.collect { macros ->
                 adapter.updateMacros(macros)
+                
+                // 显示或隐藏空状态视图
+                if (macros.isEmpty()) {
+                    binding.emptyState.visibility = View.VISIBLE
+                    binding.recyclerView.visibility = View.GONE
+                } else {
+                    binding.emptyState.visibility = View.GONE
+                    binding.recyclerView.visibility = View.VISIBLE
+                }
             }
         }
     }
-
+    
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu)
         return true
     }
-
+    
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.action_xiaomi_guide -> {
-                startActivity(Intent(this, XiaomiPermissionGuideActivity::class.java))
-                return true
+        return when (item.itemId) {
+            R.id.action_permission_guide -> {
+                showPermissionGuide()
+                true
             }
-            R.id.action_settings -> return true
-            R.id.action_help -> return true
+            R.id.action_help -> {
+                showHelp()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
         }
-        return super.onOptionsItemSelected(item)
+    }
+    
+    private fun showPermissionGuide() {
+        val message = """
+【应用权限说明】
+
+为确保应用正常工作，需要以下权限：
+
+▶ 必要权限
+• 短信权限：用于短信触发器功能
+• 通知权限：用于显示通知动作和服务状态
+
+▶ 小米/红米设备额外设置
+• 自启动权限：确保后台服务运行
+• 后台弹出界面权限：允许后台交互
+• 省电策略设为无限制：避免被系统杀掉
+
+▶ 震动功能说明
+• 需要在系统设置中开启触觉反馈
+• 路径：设置 → 声音与震动 → 点按震动
+
+▶ 如何授予权限
+1. 打开系统设置
+2. 找到应用管理 → TriggerFlow
+3. 在权限管理中授予所需权限
+
+如遇到问题，请检查以上设置是否正确配置。
+        """.trimIndent()
+        
+        AlertDialog.Builder(this)
+            .setTitle(R.string.permission_guide)
+            .setMessage(message)
+            .setPositiveButton("打开应用设置") { dialog, _ ->
+                try {
+                    val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS).apply {
+                        data = Uri.parse("package:$packageName")
+                    }
+                    startActivity(intent)
+                } catch (e: Exception) {
+                    Toast.makeText(this, "无法打开设置", Toast.LENGTH_SHORT).show()
+                }
+                dialog.dismiss()
+            }
+            .setNegativeButton(R.string.cancel) { dialog, _ ->
+                dialog.dismiss()
+            }
+            .show()
+    }
+    
+    private fun showHelp() {
+        val message = """
+【使用帮助】
+
+▶ 什么是宏？
+宏是一组自动化规则的集合，包含触发器和动作。当触发条件满足时，自动执行预设的动作。
+
+▶ 如何创建宏？
+1. 点击右下角的+按钮
+2. 输入宏名称和描述
+3. 添加触发器（如何触发）
+4. 添加动作（执行什么操作）
+5. 点击保存
+
+▶ 触发器类型
+• 时间触发器：在指定时间触发
+• 电池触发器：电量变化时触发
+• 短信触发器：收到特定短信时触发
+• 屏幕触发器：屏幕开关时触发
+• 更多类型开发中...
+
+▶ 动作类型
+• 发送通知：显示自定义通知
+• 控制WiFi/蓝牙/数据：开关或切换状态
+• 调整音量/亮度：设置系统参数
+• 振动/播放提示音：提醒功能
+• 截图：自动截取屏幕
+• 更多类型开发中...
+
+▶ 注意事项
+• 确保应用有必要的权限
+• 小米设备需要额外设置自启动权限
+• 某些功能可能需要无障碍服务支持
+
+▶ 问题排查
+1. 检查权限是否正确授予
+2. 检查宏是否已启用
+3. 查看触发记录了解执行情况
+4. 重启应用或重新创建宏
+        """.trimIndent()
+        
+        AlertDialog.Builder(this)
+            .setTitle(R.string.help_title)
+            .setMessage(message)
+            .setPositiveButton(R.string.cancel) { dialog, _ ->
+                dialog.dismiss()
+            }
+            .show()
     }
 }

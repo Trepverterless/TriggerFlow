@@ -1418,11 +1418,22 @@ color abc_tint_seek_thumb
 color abc_tint_spinner
 color abc_tint_switch_track
 color accent
+color accent_dark
 color accent_material_dark
 color accent_material_light
+color action_app
+color action_bluetooth
+color action_brightness
+color action_data
+color action_notification
+color action_screen
+color action_vibration
+color action_volume
+color action_wifi
 color androidx_core_ripple_material_light
 color androidx_core_secondary_text_default_material_light
 color background
+color background_dark
 color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
@@ -1438,6 +1449,8 @@ color button_material_dark
 color button_material_light
 color call_notification_answer_color
 color call_notification_decline_color
+color card_background
+color card_background_dark
 color cardview_dark_background
 color cardview_light_background
 color cardview_shadow_end_color
@@ -1495,6 +1508,7 @@ color ic_launcher_background
 color icon_flow_blue
 color icon_flow_cyan
 color icon_flow_white
+color info
 color m3_appbar_overlay_color
 color m3_assist_chip_icon_tint_color
 color m3_assist_chip_stroke_color
@@ -2158,6 +2172,7 @@ color primary
 color primary_dark
 color primary_dark_material_dark
 color primary_dark_material_light
+color primary_light
 color primary_material_dark
 color primary_material_light
 color primary_text_default_material_dark
@@ -2173,7 +2188,9 @@ color secondary_text_default_material_dark
 color secondary_text_default_material_light
 color secondary_text_disabled_material_dark
 color secondary_text_disabled_material_light
+color success
 color surface
+color surface_dark
 color switch_thumb_disabled_material_dark
 color switch_thumb_disabled_material_light
 color switch_thumb_material_dark
@@ -2182,8 +2199,20 @@ color switch_thumb_normal_material_dark
 color switch_thumb_normal_material_light
 color teal_200
 color teal_700
+color text_primary
+color text_primary_dark
+color text_secondary
+color text_secondary_dark
 color tooltip_background_dark
 color tooltip_background_light
+color trigger_battery
+color trigger_bluetooth
+color trigger_location
+color trigger_screen
+color trigger_sms
+color trigger_time
+color trigger_wifi
+color warning
 color white
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_content_inset_with_nav
@@ -3246,9 +3275,8 @@ id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
-id action_settings
+id action_permission_guide
 id action_text
-id action_xiaomi_guide
 id actions
 id activity_chooser_view_content
 id add
@@ -3262,6 +3290,7 @@ id animateToEnd
 id animateToStart
 id antiClockwise
 id anticipate
+id appBarLayout
 id arc
 id asConfigured
 id async
@@ -3383,6 +3412,7 @@ id edit_query
 id edit_text_id
 id elastic
 id embed
+id emptyState
 id emptyView
 id end
 id endToStart
@@ -3703,6 +3733,7 @@ id title
 id titleDividerNoCustom
 id title_template
 id toggle
+id toolbar
 id top
 id topPanel
 id touch_outside
@@ -4027,6 +4058,11 @@ string any_content
 string any_number
 string app_name
 string appbar_scrolling_view_behavior
+string battery_above_level
+string battery_below_level
+string battery_charging
+string battery_discharging
+string battery_level_format
 string battery_trigger
 string bluetooth
 string bluetooth_action
@@ -4050,6 +4086,7 @@ string cancel
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
+string choose_trigger_description
 string clear_log_message
 string clear_log_title
 string clear_logs
@@ -4087,6 +4124,7 @@ string expand_button_title
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string help_title
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string item_view_role_description
@@ -4200,6 +4238,7 @@ string mtrl_timepicker_cancel
 string mtrl_timepicker_confirm
 string new_macro
 string no_actions
+string no_macros
 string no_trigger_logs
 string no_triggers
 string not_set
@@ -4213,6 +4252,7 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string permission_guide
 string preference_copied
 string remove
 string ringtone
@@ -4249,12 +4289,14 @@ string sms_trigger_description
 string status_bar_notification_info_overflow
 string summary_collapsed_preference_list
 string take_screenshot
+string tap_to_add_macro
 string time_trigger
 string title
 string toggle
 string toggle_bluetooth
 string toggle_data
 string toggle_wifi
+string trigger_condition
 string trigger_count
 string trigger_list
 string trigger_log_title
@@ -4272,6 +4314,7 @@ string wifi
 string wifi_action
 string wifi_trigger
 string xiaomi_permission_guide
+style ActionChipStyle
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog
@@ -5044,6 +5087,7 @@ style ThemeOverlay_MaterialComponents_TimePicker_Display_TextInputEditText
 style ThemeOverlay_MaterialComponents_Toolbar_Popup_Primary
 style ThemeOverlay_MaterialComponents_Toolbar_Primary
 style ThemeOverlay_MaterialComponents_Toolbar_Surface
+style TriggerChipStyle
 style Widget_AppCompat_ActionBar
 style Widget_AppCompat_ActionBar_Solid
 style Widget_AppCompat_ActionBar_TabBar
@@ -5130,6 +5174,7 @@ style Widget_Design_Snackbar
 style Widget_Design_TabLayout
 style Widget_Design_TextInputEditText
 style Widget_Design_TextInputLayout
+style Widget_MacroDroid_CardView
 style Widget_Material3_ActionBar_Solid
 style Widget_Material3_ActionMode
 style Widget_Material3_AppBarLayout

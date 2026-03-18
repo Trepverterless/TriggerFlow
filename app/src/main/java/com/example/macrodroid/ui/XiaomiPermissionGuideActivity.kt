@@ -1,7 +1,6 @@
 package com.example.macrodroid.ui
 
 import android.os.Bundle
-import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.example.macrodroid.R
 import com.example.macrodroid.databinding.ActivityXiaomiPermissionGuideBinding
@@ -14,8 +13,10 @@ class XiaomiPermissionGuideActivity : AppCompatActivity() {
         binding = ActivityXiaomiPermissionGuideBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Setup Toolbar
+        setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = "小米设备权限设置指南"
+        supportActionBar?.title = getString(R.string.xiaomi_permission_guide)
 
         binding.tvGuide.text = """
 在小米/红米设备上，应用需要额外的权限才能正常接收短信触发和执行动作：
@@ -194,13 +195,5 @@ class XiaomiPermissionGuideActivity : AppCompatActivity() {
 - 是否开启了"触觉反馈"（震动功能必需）
 - 短信权限是否完整授予（两项权限都要允许）
         """.trimIndent()
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == android.R.id.home) {
-            onBackPressedDispatcher.onBackPressed()
-            return true
-        }
-        return super.onOptionsItemSelected(item)
     }
 }

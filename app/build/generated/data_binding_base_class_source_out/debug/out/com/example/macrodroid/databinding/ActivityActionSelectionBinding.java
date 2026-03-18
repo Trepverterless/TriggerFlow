@@ -6,11 +6,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.core.widget.NestedScrollView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.macrodroid.R;
-import com.google.android.material.button.MaterialButton;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -20,48 +20,47 @@ public final class ActivityActionSelectionBinding implements ViewBinding {
   private final NestedScrollView rootView;
 
   @NonNull
-  public final MaterialButton btnAlertSound;
+  public final CardView btnAlertSound;
 
   @NonNull
-  public final MaterialButton btnBluetooth;
+  public final CardView btnBluetooth;
 
   @NonNull
-  public final MaterialButton btnBrightness;
+  public final CardView btnBrightness;
 
   @NonNull
-  public final MaterialButton btnData;
+  public final CardView btnData;
 
   @NonNull
-  public final MaterialButton btnLaunchApp;
+  public final CardView btnLaunchApp;
 
   @NonNull
-  public final MaterialButton btnNotification;
+  public final CardView btnNotification;
 
   @NonNull
-  public final MaterialButton btnScreen;
+  public final CardView btnScreen;
 
   @NonNull
-  public final MaterialButton btnScreenshot;
+  public final CardView btnScreenshot;
 
   @NonNull
-  public final MaterialButton btnSendSMS;
+  public final CardView btnSendSMS;
 
   @NonNull
-  public final MaterialButton btnVibration;
+  public final CardView btnVibration;
 
   @NonNull
-  public final MaterialButton btnVolume;
+  public final CardView btnVolume;
 
   @NonNull
-  public final MaterialButton btnWiFi;
+  public final CardView btnWiFi;
 
   private ActivityActionSelectionBinding(@NonNull NestedScrollView rootView,
-      @NonNull MaterialButton btnAlertSound, @NonNull MaterialButton btnBluetooth,
-      @NonNull MaterialButton btnBrightness, @NonNull MaterialButton btnData,
-      @NonNull MaterialButton btnLaunchApp, @NonNull MaterialButton btnNotification,
-      @NonNull MaterialButton btnScreen, @NonNull MaterialButton btnScreenshot,
-      @NonNull MaterialButton btnSendSMS, @NonNull MaterialButton btnVibration,
-      @NonNull MaterialButton btnVolume, @NonNull MaterialButton btnWiFi) {
+      @NonNull CardView btnAlertSound, @NonNull CardView btnBluetooth,
+      @NonNull CardView btnBrightness, @NonNull CardView btnData, @NonNull CardView btnLaunchApp,
+      @NonNull CardView btnNotification, @NonNull CardView btnScreen,
+      @NonNull CardView btnScreenshot, @NonNull CardView btnSendSMS, @NonNull CardView btnVibration,
+      @NonNull CardView btnVolume, @NonNull CardView btnWiFi) {
     this.rootView = rootView;
     this.btnAlertSound = btnAlertSound;
     this.btnBluetooth = btnBluetooth;
@@ -105,73 +104,73 @@ public final class ActivityActionSelectionBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.btnAlertSound;
-      MaterialButton btnAlertSound = ViewBindings.findChildViewById(rootView, id);
+      CardView btnAlertSound = ViewBindings.findChildViewById(rootView, id);
       if (btnAlertSound == null) {
         break missingId;
       }
 
       id = R.id.btnBluetooth;
-      MaterialButton btnBluetooth = ViewBindings.findChildViewById(rootView, id);
+      CardView btnBluetooth = ViewBindings.findChildViewById(rootView, id);
       if (btnBluetooth == null) {
         break missingId;
       }
 
       id = R.id.btnBrightness;
-      MaterialButton btnBrightness = ViewBindings.findChildViewById(rootView, id);
+      CardView btnBrightness = ViewBindings.findChildViewById(rootView, id);
       if (btnBrightness == null) {
         break missingId;
       }
 
       id = R.id.btnData;
-      MaterialButton btnData = ViewBindings.findChildViewById(rootView, id);
+      CardView btnData = ViewBindings.findChildViewById(rootView, id);
       if (btnData == null) {
         break missingId;
       }
 
       id = R.id.btnLaunchApp;
-      MaterialButton btnLaunchApp = ViewBindings.findChildViewById(rootView, id);
+      CardView btnLaunchApp = ViewBindings.findChildViewById(rootView, id);
       if (btnLaunchApp == null) {
         break missingId;
       }
 
       id = R.id.btnNotification;
-      MaterialButton btnNotification = ViewBindings.findChildViewById(rootView, id);
+      CardView btnNotification = ViewBindings.findChildViewById(rootView, id);
       if (btnNotification == null) {
         break missingId;
       }
 
       id = R.id.btnScreen;
-      MaterialButton btnScreen = ViewBindings.findChildViewById(rootView, id);
+      CardView btnScreen = ViewBindings.findChildViewById(rootView, id);
       if (btnScreen == null) {
         break missingId;
       }
 
       id = R.id.btnScreenshot;
-      MaterialButton btnScreenshot = ViewBindings.findChildViewById(rootView, id);
+      CardView btnScreenshot = ViewBindings.findChildViewById(rootView, id);
       if (btnScreenshot == null) {
         break missingId;
       }
 
       id = R.id.btnSendSMS;
-      MaterialButton btnSendSMS = ViewBindings.findChildViewById(rootView, id);
+      CardView btnSendSMS = ViewBindings.findChildViewById(rootView, id);
       if (btnSendSMS == null) {
         break missingId;
       }
 
       id = R.id.btnVibration;
-      MaterialButton btnVibration = ViewBindings.findChildViewById(rootView, id);
+      CardView btnVibration = ViewBindings.findChildViewById(rootView, id);
       if (btnVibration == null) {
         break missingId;
       }
 
       id = R.id.btnVolume;
-      MaterialButton btnVolume = ViewBindings.findChildViewById(rootView, id);
+      CardView btnVolume = ViewBindings.findChildViewById(rootView, id);
       if (btnVolume == null) {
         break missingId;
       }
 
       id = R.id.btnWiFi;
-      MaterialButton btnWiFi = ViewBindings.findChildViewById(rootView, id);
+      CardView btnWiFi = ViewBindings.findChildViewById(rootView, id);
       if (btnWiFi == null) {
         break missingId;
       }

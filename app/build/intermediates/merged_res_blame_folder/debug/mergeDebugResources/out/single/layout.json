@@ -1,54 +1,58 @@
 [
     {
-        "merged": "com.example.macrodroid.app-mergeDebugResources-41:/layout/item_trigger_log.xml",
-        "source": "com.example.macrodroid.app-main-44:/layout/item_trigger_log.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-mergeDebugResources-41:\\layout\\dialog_brightness.xml",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-main-44:\\layout\\dialog_brightness.xml"
+    },
+    {
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-mergeDebugResources-41:\\layout\\item_trigger_action.xml",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-main-44:\\layout\\item_trigger_action.xml"
     },
     {
         "merged": "com.example.macrodroid.app-mergeDebugResources-41:/layout/activity_action_selection.xml",
         "source": "com.example.macrodroid.app-main-44:/layout/activity_action_selection.xml"
     },
     {
-        "merged": "com.example.macrodroid.app-mergeDebugResources-41:/layout/dialog_brightness.xml",
-        "source": "com.example.macrodroid.app-main-44:/layout/dialog_brightness.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-mergeDebugResources-41:\\layout\\activity_xiaomi_permission_guide.xml",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-main-44:\\layout\\activity_xiaomi_permission_guide.xml"
     },
     {
-        "merged": "com.example.macrodroid.app-mergeDebugResources-41:/layout/activity_trigger_log.xml",
-        "source": "com.example.macrodroid.app-main-44:/layout/activity_trigger_log.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-mergeDebugResources-41:\\layout\\activity_trigger_log.xml",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-main-44:\\layout\\activity_trigger_log.xml"
     },
     {
-        "merged": "com.example.macrodroid.app-mergeDebugResources-41:/layout/item_trigger_action.xml",
-        "source": "com.example.macrodroid.app-main-44:/layout/item_trigger_action.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-mergeDebugResources-41:\\layout\\activity_trigger_selection.xml",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-main-44:\\layout\\activity_trigger_selection.xml"
     },
     {
-        "merged": "com.example.macrodroid.app-mergeDebugResources-41:/layout/dialog_sms_trigger.xml",
-        "source": "com.example.macrodroid.app-main-44:/layout/dialog_sms_trigger.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-mergeDebugResources-41:\\layout\\dialog_notification.xml",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-main-44:\\layout\\dialog_notification.xml"
     },
     {
-        "merged": "com.example.macrodroid.app-mergeDebugResources-41:/layout/dialog_volume.xml",
-        "source": "com.example.macrodroid.app-main-44:/layout/dialog_volume.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-mergeDebugResources-41:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-main-44:\\layout\\activity_main.xml"
     },
     {
-        "merged": "com.example.macrodroid.app-mergeDebugResources-41:/layout/activity_macro_detail.xml",
-        "source": "com.example.macrodroid.app-main-44:/layout/activity_macro_detail.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-mergeDebugResources-41:\\layout\\dialog_sms_trigger.xml",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-main-44:\\layout\\dialog_sms_trigger.xml"
     },
     {
-        "merged": "com.example.macrodroid.app-mergeDebugResources-41:/layout/activity_main.xml",
-        "source": "com.example.macrodroid.app-main-44:/layout/activity_main.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-mergeDebugResources-41:\\layout\\activity_macro_detail.xml",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-main-44:\\layout\\activity_macro_detail.xml"
     },
     {
-        "merged": "com.example.macrodroid.app-mergeDebugResources-41:/layout/item_macro.xml",
-        "source": "com.example.macrodroid.app-main-44:/layout/item_macro.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-mergeDebugResources-41:\\layout\\item_macro.xml",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-main-44:\\layout\\item_macro.xml"
     },
     {
-        "merged": "com.example.macrodroid.app-mergeDebugResources-41:/layout/activity_xiaomi_permission_guide.xml",
-        "source": "com.example.macrodroid.app-main-44:/layout/activity_xiaomi_permission_guide.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-mergeDebugResources-41:\\layout\\activity_action_selection.xml",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-main-44:\\layout\\activity_action_selection.xml"
     },
     {
-        "merged": "com.example.macrodroid.app-mergeDebugResources-41:/layout/activity_trigger_selection.xml",
-        "source": "com.example.macrodroid.app-main-44:/layout/activity_trigger_selection.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-mergeDebugResources-41:\\layout\\dialog_volume.xml",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-main-44:\\layout\\dialog_volume.xml"
     },
     {
-        "merged": "com.example.macrodroid.app-mergeDebugResources-41:/layout/dialog_notification.xml",
-        "source": "com.example.macrodroid.app-main-44:/layout/dialog_notification.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-mergeDebugResources-41:\\layout\\item_trigger_log.xml",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-main-44:\\layout\\item_trigger_log.xml"
     }
 ]

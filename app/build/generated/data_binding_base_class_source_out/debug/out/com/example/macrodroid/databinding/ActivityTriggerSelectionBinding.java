@@ -6,11 +6,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.core.widget.NestedScrollView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.macrodroid.R;
-import com.google.android.material.button.MaterialButton;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -20,31 +20,31 @@ public final class ActivityTriggerSelectionBinding implements ViewBinding {
   private final NestedScrollView rootView;
 
   @NonNull
-  public final MaterialButton btnBatteryTrigger;
+  public final CardView btnBatteryTrigger;
 
   @NonNull
-  public final MaterialButton btnBluetoothTrigger;
+  public final CardView btnBluetoothTrigger;
 
   @NonNull
-  public final MaterialButton btnLocationTrigger;
+  public final CardView btnLocationTrigger;
 
   @NonNull
-  public final MaterialButton btnScreenTrigger;
+  public final CardView btnScreenTrigger;
 
   @NonNull
-  public final MaterialButton btnSmsTrigger;
+  public final CardView btnSmsTrigger;
 
   @NonNull
-  public final MaterialButton btnTimeTrigger;
+  public final CardView btnTimeTrigger;
 
   @NonNull
-  public final MaterialButton btnWiFiTrigger;
+  public final CardView btnWiFiTrigger;
 
   private ActivityTriggerSelectionBinding(@NonNull NestedScrollView rootView,
-      @NonNull MaterialButton btnBatteryTrigger, @NonNull MaterialButton btnBluetoothTrigger,
-      @NonNull MaterialButton btnLocationTrigger, @NonNull MaterialButton btnScreenTrigger,
-      @NonNull MaterialButton btnSmsTrigger, @NonNull MaterialButton btnTimeTrigger,
-      @NonNull MaterialButton btnWiFiTrigger) {
+      @NonNull CardView btnBatteryTrigger, @NonNull CardView btnBluetoothTrigger,
+      @NonNull CardView btnLocationTrigger, @NonNull CardView btnScreenTrigger,
+      @NonNull CardView btnSmsTrigger, @NonNull CardView btnTimeTrigger,
+      @NonNull CardView btnWiFiTrigger) {
     this.rootView = rootView;
     this.btnBatteryTrigger = btnBatteryTrigger;
     this.btnBluetoothTrigger = btnBluetoothTrigger;
@@ -83,43 +83,43 @@ public final class ActivityTriggerSelectionBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.btnBatteryTrigger;
-      MaterialButton btnBatteryTrigger = ViewBindings.findChildViewById(rootView, id);
+      CardView btnBatteryTrigger = ViewBindings.findChildViewById(rootView, id);
       if (btnBatteryTrigger == null) {
         break missingId;
       }
 
       id = R.id.btnBluetoothTrigger;
-      MaterialButton btnBluetoothTrigger = ViewBindings.findChildViewById(rootView, id);
+      CardView btnBluetoothTrigger = ViewBindings.findChildViewById(rootView, id);
       if (btnBluetoothTrigger == null) {
         break missingId;
       }
 
       id = R.id.btnLocationTrigger;
-      MaterialButton btnLocationTrigger = ViewBindings.findChildViewById(rootView, id);
+      CardView btnLocationTrigger = ViewBindings.findChildViewById(rootView, id);
       if (btnLocationTrigger == null) {
         break missingId;
       }
 
       id = R.id.btnScreenTrigger;
-      MaterialButton btnScreenTrigger = ViewBindings.findChildViewById(rootView, id);
+      CardView btnScreenTrigger = ViewBindings.findChildViewById(rootView, id);
       if (btnScreenTrigger == null) {
         break missingId;
       }
 
       id = R.id.btnSmsTrigger;
-      MaterialButton btnSmsTrigger = ViewBindings.findChildViewById(rootView, id);
+      CardView btnSmsTrigger = ViewBindings.findChildViewById(rootView, id);
       if (btnSmsTrigger == null) {
         break missingId;
       }
 
       id = R.id.btnTimeTrigger;
-      MaterialButton btnTimeTrigger = ViewBindings.findChildViewById(rootView, id);
+      CardView btnTimeTrigger = ViewBindings.findChildViewById(rootView, id);
       if (btnTimeTrigger == null) {
         break missingId;
       }
 
       id = R.id.btnWiFiTrigger;
-      MaterialButton btnWiFiTrigger = ViewBindings.findChildViewById(rootView, id);
+      CardView btnWiFiTrigger = ViewBindings.findChildViewById(rootView, id);
       if (btnWiFiTrigger == null) {
         break missingId;
       }

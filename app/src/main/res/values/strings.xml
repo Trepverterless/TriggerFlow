@@ -123,4 +123,23 @@
     <string name="alert_sound_notification">通知音</string>
     <string name="alert_sound_ringtone">铃声</string>
     <string name="alert_sound_default">默认提示音</string>
+
+    <!-- Battery Trigger Strings -->
+    <string name="battery_above_level">电量高于</string>
+    <string name="battery_below_level">电量低于</string>
+    <string name="battery_charging">开始充电</string>
+    <string name="battery_discharging">停止充电</string>
+    <string name="trigger_condition">触发条件</string>
+    <string name="battery_level_format">电量: %d%%</string>
+
+    <!-- UI Enhancement Strings -->
+    <string name="choose_trigger_description">选择一个类型来开始创建你的自动化规则</string>
+    <string name="no_macros">还没有创建任何宏</string>
+    <string name="tap_to_add_macro">点击下方按钮开始创建第一个宏</string>
+
+    <!-- Permission Guide -->
+    <string name="permission_guide">权限说明</string>
+
+    <!-- Help -->
+    <string name="help_title">使用帮助</string>
 </resources>

@@ -4,13 +4,16 @@ package com.example.macrodroid.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.Toolbar;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.macrodroid.R;
+import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.lang.NullPointerException;
@@ -22,7 +25,13 @@ public final class ActivityMainBinding implements ViewBinding {
   private final CoordinatorLayout rootView;
 
   @NonNull
+  public final AppBarLayout appBarLayout;
+
+  @NonNull
   public final BottomNavigationView bottomNavigation;
+
+  @NonNull
+  public final LinearLayout emptyState;
 
   @NonNull
   public final FloatingActionButton fabAdd;
@@ -30,13 +39,20 @@ public final class ActivityMainBinding implements ViewBinding {
   @NonNull
   public final RecyclerView recyclerView;
 
+  @NonNull
+  public final Toolbar toolbar;
+
   private ActivityMainBinding(@NonNull CoordinatorLayout rootView,
-      @NonNull BottomNavigationView bottomNavigation, @NonNull FloatingActionButton fabAdd,
-      @NonNull RecyclerView recyclerView) {
+      @NonNull AppBarLayout appBarLayout, @NonNull BottomNavigationView bottomNavigation,
+      @NonNull LinearLayout emptyState, @NonNull FloatingActionButton fabAdd,
+      @NonNull RecyclerView recyclerView, @NonNull Toolbar toolbar) {
     this.rootView = rootView;
+    this.appBarLayout = appBarLayout;
     this.bottomNavigation = bottomNavigation;
+    this.emptyState = emptyState;
     this.fabAdd = fabAdd;
     this.recyclerView = recyclerView;
+    this.toolbar = toolbar;
   }
 
   @Override
@@ -66,9 +82,21 @@ public final class ActivityMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.appBarLayout;
+      AppBarLayout appBarLayout = ViewBindings.findChildViewById(rootView, id);
+      if (appBarLayout == null) {
+        break missingId;
+      }
+
       id = R.id.bottomNavigation;
       BottomNavigationView bottomNavigation = ViewBindings.findChildViewById(rootView, id);
       if (bottomNavigation == null) {
+        break missingId;
+      }
+
+      id = R.id.emptyState;
+      LinearLayout emptyState = ViewBindings.findChildViewById(rootView, id);
+      if (emptyState == null) {
         break missingId;
       }
 
@@ -84,8 +112,14 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMainBinding((CoordinatorLayout) rootView, bottomNavigation, fabAdd,
-          recyclerView);
+      id = R.id.toolbar;
+      Toolbar toolbar = ViewBindings.findChildViewById(rootView, id);
+      if (toolbar == null) {
+        break missingId;
+      }
+
+      return new ActivityMainBinding((CoordinatorLayout) rootView, appBarLayout, bottomNavigation,
+          emptyState, fabAdd, recyclerView, toolbar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

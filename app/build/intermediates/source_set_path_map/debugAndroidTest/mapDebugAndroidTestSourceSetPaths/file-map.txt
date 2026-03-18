@@ -1,4 +1,4 @@
-com.example.macrodroid.test.app-androidTest-0 D:\Code\andrio\app\build\generated\res\resValues\androidTest\debug
-com.example.macrodroid.test.app-mergeDebugAndroidTestResources-1 D:\Code\andrio\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
-com.example.macrodroid.test.app-mergeDebugAndroidTestResources-2 D:\Code\andrio\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
-com.example.macrodroid.test.app-debugAndroidTest-3 D:\Code\andrio\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources
+com.example.macrodroid.test.app-androidTest-0 D:\Code\andrio\TriggerFlow\app\build\generated\res\resValues\androidTest\debug
+com.example.macrodroid.test.app-mergeDebugAndroidTestResources-1 D:\Code\andrio\TriggerFlow\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.example.macrodroid.test.app-mergeDebugAndroidTestResources-2 D:\Code\andrio\TriggerFlow\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.example.macrodroid.test.app-debugAndroidTest-3 D:\Code\andrio\TriggerFlow\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources

@@ -6,6 +6,7 @@ import android.app.NotificationManager
 import android.app.Service
 import android.content.Context
 import android.content.Intent
+import android.content.IntentFilter
 import android.content.pm.ServiceInfo
 import android.os.Build
 import android.os.IBinder
@@ -20,6 +21,7 @@ import com.example.macrodroid.data.MacroRepository
 import com.example.macrodroid.data.Trigger
 import com.example.macrodroid.data.TriggerLog
 import com.example.macrodroid.data.TriggerLogRepository
+import com.example.macrodroid.trigger.BatteryTriggerReceiver
 import com.example.macrodroid.trigger.TimeTriggerReceiver
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -32,6 +34,7 @@ class MacroService : Service() {
     private lateinit var actionExecutor: ActionExecutor
     private lateinit var logRepository: TriggerLogRepository
     private val serviceScope = CoroutineScope(Dispatchers.Default + Job())
+    private var batteryTriggerReceiver: BatteryTriggerReceiver? = null
 
     companion object {
         private const val NOTIFICATION_ID = 1
@@ -49,7 +52,7 @@ class MacroService : Service() {
         fun handleTrigger(context: Context, trigger: Trigger) {
             val intent = Intent(context, MacroService::class.java).apply {
                 action = "HANDLE_TRIGGER"
-                putExtra("trigger_type", when (trigger) {
+                putExtra("trigger-type", when (trigger) {
                     is Trigger.TimeTrigger -> "time"
                     is Trigger.LocationTrigger -> "location"
                     is Trigger.BatteryTrigger -> "battery"
@@ -58,9 +61,26 @@ class MacroService : Service() {
                     is Trigger.ScreenTrigger -> "screen"
                     is Trigger.SmsTrigger -> "sms"
                 })
-                putExtra("trigger_config", trigger.toString())
+                putExtra("trigger-config", trigger.toString())
             }
             context.startService(intent)
+        }
+        
+        /**
+         * 处理电池触发器
+         */
+        fun handleBatteryTrigger(context: Context, batteryLevel: Int, isCharging: Boolean, isPowerConnected: Boolean) {
+            val intent = Intent(context, MacroService::class.java).apply {
+                action = "HANDLE_BATTERY_TRIGGER"
+                putExtra("battery_level", batteryLevel)
+                putExtra("is_charging", isCharging)
+                putExtra("is_power_connected", isPowerConnected)
+            }
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                context.startForegroundService(intent)
+            } else {
+                context.startService(intent)
+            }
         }
 
         fun handleSmsTrigger(context: Context, phoneNumber: String, messageBody: String) {
@@ -85,6 +105,7 @@ class MacroService : Service() {
         createNotificationChannel()
         startForegroundWithType()
         setupTriggers()
+        registerBatteryReceiver()
     }
 
     private fun startForegroundWithType() {
@@ -103,8 +124,8 @@ class MacroService : Service() {
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         when (intent?.action) {
             "HANDLE_TRIGGER" -> {
-                val triggerType = intent.getStringExtra("trigger_type")
-                val triggerConfig = intent.getStringExtra("trigger_config")
+                val triggerType = intent.getStringExtra("trigger-type")
+                val triggerConfig = intent.getStringExtra("trigger-config")
                 if (triggerType != null && triggerConfig != null) {
                     handleTrigger(triggerType, triggerConfig)
                 }
@@ -116,11 +137,24 @@ class MacroService : Service() {
                     handleSmsTrigger(phoneNumber, messageBody)
                 }
             }
+            "HANDLE_BATTERY_TRIGGER" -> {
+                val batteryLevel = intent.getIntExtra("battery_level", -1)
+                val isCharging = intent.getBooleanExtra("is_charging", false)
+                val isPowerConnected = intent.getBooleanExtra("is_power_connected", false)
+                if (batteryLevel >= 0) {
+                    handleBatteryTriggerInternal(batteryLevel, isCharging, isPowerConnected)
+                }
+            }
         }
         return START_STICKY
     }
 
     override fun onBind(intent: Intent?): IBinder? = null
+    
+    override fun onDestroy() {
+        super.onDestroy()
+        unregisterBatteryReceiver()
+    }
 
     private fun createNotificationChannel() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -147,7 +181,6 @@ class MacroService : Service() {
         serviceScope.launch {
             repository.macros.collect { macros ->
                 TimeTriggerReceiver.cancelAllTriggers(this@MacroService)
-
                 macros.filter { it.isEnabled }.forEach { macro ->
                     macro.triggers.forEach { trigger ->
                         when (trigger) {
@@ -159,6 +192,45 @@ class MacroService : Service() {
                     }
                 }
             }
+        }
+    }
+    
+    /**
+     * 注册电池状态接收器
+     */
+    private fun registerBatteryReceiver() {
+        try {
+            batteryTriggerReceiver = BatteryTriggerReceiver()
+            val filter = IntentFilter().apply {
+                addAction(Intent.ACTION_BATTERY_CHANGED)
+                addAction(Intent.ACTION_BATTERY_LOW)
+                addAction(Intent.ACTION_BATTERY_OKAY)
+                addAction(Intent.ACTION_POWER_CONNECTED)
+                addAction(Intent.ACTION_POWER_DISCONNECTED)
+            }
+            
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                registerReceiver(batteryTriggerReceiver, filter, Context.RECEIVER_NOT_EXPORTED)
+            } else {
+                registerReceiver(batteryTriggerReceiver, filter)
+            }
+            Log.d(TAG, "Battery receiver registered successfully")
+        } catch (e: Exception) {
+            Log.e(TAG, "Failed to register battery receiver", e)
+        }
+    }
+    
+    /**
+     * 注销电池状态接收器
+     */
+    private fun unregisterBatteryReceiver() {
+        try {
+            batteryTriggerReceiver?.let {
+                unregisterReceiver(it)
+                Log.d(TAG, "Battery receiver unregistered successfully")
+            }
+        } catch (e: Exception) {
+            Log.e(TAG, "Failed to unregister battery receiver", e)
         }
     }
 
@@ -189,6 +261,69 @@ class MacroService : Service() {
                 }
             }
         }
+    }
+    
+    /**
+     * 处理电池触发器
+     */
+    private fun handleBatteryTriggerInternal(batteryLevel: Int, isCharging: Boolean, isPowerConnected: Boolean) {
+        serviceScope.launch {
+            Log.d(TAG, "Handling battery trigger: level=$batteryLevel, charging=$isCharging, powerConnected=$isPowerConnected")
+            
+            val macros = repository.macros.value
+            val triggeredMacros = macros.filter { macro ->
+                macro.isEnabled && macro.triggers.any { trigger ->
+                    matchesBatteryTrigger(trigger, batteryLevel, isCharging, isPowerConnected)
+                } && checkConstraints(macro)
+            }
+
+            triggeredMacros.forEach { macro ->
+                val eventDescription = getBatteryEventDescription(batteryLevel, isCharging, isPowerConnected)
+                val actionDescriptions = macro.actions.map { getActionDescription(it) }
+                
+                logRepository.addLog(
+                    TriggerLog(
+                        macroId = macro.id,
+                        macroName = macro.name,
+                        event = eventDescription,
+                        actions = actionDescriptions
+                    )
+                )
+                
+                Log.d(TAG, "Executing actions for macro: ${macro.name}")
+                macro.actions.forEach { action ->
+                    actionExecutor.executeAction(action)
+                }
+            }
+        }
+    }
+    
+    /**
+     * 匹配电池触发器
+     */
+    private fun matchesBatteryTrigger(trigger: Trigger, batteryLevel: Int, isCharging: Boolean, isPowerConnected: Boolean): Boolean {
+        return when (trigger) {
+            is Trigger.BatteryTrigger -> {
+                val matches = when (trigger.type) {
+                    Trigger.BatteryType.ABOVE -> batteryLevel > trigger.level
+                    Trigger.BatteryType.BELOW -> batteryLevel < trigger.level
+                    Trigger.BatteryType.CHARGING -> isCharging || isPowerConnected
+                    Trigger.BatteryType.DISCHARGING -> !isCharging && !isPowerConnected
+                }
+                Log.d(TAG, "Battery trigger ${trigger.id}: type=${trigger.type}, level=${trigger.level}, " +
+                        "currentLevel=$batteryLevel, charging=$isCharging, matches=$matches")
+                matches
+            }
+            else -> false
+        }
+    }
+    
+    /**
+     * 获取电池事件描述
+     */
+    private fun getBatteryEventDescription(batteryLevel: Int, isCharging: Boolean, isPowerConnected: Boolean): String {
+        val status = if (isCharging || isPowerConnected) "充电中" else "放电中"
+        return "电池触发器 (电量: $batteryLevel%, $status)"
     }
 
     private fun getTriggerEventName(triggerType: String): String {

@@ -4,33 +4,43 @@ package com.example.macrodroid.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ScrollView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.Toolbar;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.macrodroid.R;
+import com.google.android.material.appbar.AppBarLayout;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
 
 public final class ActivityXiaomiPermissionGuideBinding implements ViewBinding {
   @NonNull
-  private final ScrollView rootView;
+  private final LinearLayout rootView;
+
+  @NonNull
+  public final AppBarLayout appBarLayout;
+
+  @NonNull
+  public final Toolbar toolbar;
 
   @NonNull
   public final TextView tvGuide;
 
-  private ActivityXiaomiPermissionGuideBinding(@NonNull ScrollView rootView,
-      @NonNull TextView tvGuide) {
+  private ActivityXiaomiPermissionGuideBinding(@NonNull LinearLayout rootView,
+      @NonNull AppBarLayout appBarLayout, @NonNull Toolbar toolbar, @NonNull TextView tvGuide) {
     this.rootView = rootView;
+    this.appBarLayout = appBarLayout;
+    this.toolbar = toolbar;
     this.tvGuide = tvGuide;
   }
 
   @Override
   @NonNull
-  public ScrollView getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -55,13 +65,26 @@ public final class ActivityXiaomiPermissionGuideBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.appBarLayout;
+      AppBarLayout appBarLayout = ViewBindings.findChildViewById(rootView, id);
+      if (appBarLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.toolbar;
+      Toolbar toolbar = ViewBindings.findChildViewById(rootView, id);
+      if (toolbar == null) {
+        break missingId;
+      }
+
       id = R.id.tvGuide;
       TextView tvGuide = ViewBindings.findChildViewById(rootView, id);
       if (tvGuide == null) {
         break missingId;
       }
 
-      return new ActivityXiaomiPermissionGuideBinding((ScrollView) rootView, tvGuide);
+      return new ActivityXiaomiPermissionGuideBinding((LinearLayout) rootView, appBarLayout,
+          toolbar, tvGuide);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

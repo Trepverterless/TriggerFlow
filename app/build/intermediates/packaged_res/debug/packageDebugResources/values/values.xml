@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="accent">#FF03DAC5</color>
-    <color name="background">#FFFFFFFF</color>
+    <color name="accent_dark">#FF018786</color>
+    <color name="action_app">#FF4CAF50</color>
+    <color name="action_bluetooth">#FF9C27B0</color>
+    <color name="action_brightness">#FFFFC107</color>
+    <color name="action_data">#FF2196F3</color>
+    <color name="action_notification">#FF6200EE</color>
+    <color name="action_screen">#FFFF9800</color>
+    <color name="action_vibration">#FF795548</color>
+    <color name="action_volume">#FFFF5722</color>
+    <color name="action_wifi">#FF00BCD4</color>
+    <color name="background">#FFF5F5F5</color>
+    <color name="background_dark">#FF121212</color>
     <color name="black">#FF000000</color>
+    <color name="card_background">#FFFFFFFF</color>
+    <color name="card_background_dark">#FF2D2D2D</color>
     <color name="error">#FFB00020</color>
     <color name="ic_launcher_background">#1A237E</color>
     <color name="icon_flow_blue">#FF2196F3</color>
     <color name="icon_flow_cyan">#FF00BCD4</color>
     <color name="icon_flow_white">#FFFFFFFF</color>
+    <color name="info">#FF2196F3</color>
     <color name="on_background">#FF000000</color>
     <color name="on_error">#FFFFFFFF</color>
     <color name="on_primary">#FFFFFFFF</color>
@@ -15,12 +29,27 @@
     <color name="on_surface">#FF000000</color>
     <color name="primary">#FF6200EE</color>
     <color name="primary_dark">#FF3700B3</color>
+    <color name="primary_light">#FF9E47FF</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
+    <color name="success">#FF4CAF50</color>
     <color name="surface">#FFFFFFFF</color>
+    <color name="surface_dark">#FF1E1E1E</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
+    <color name="text_primary">#DE000000</color>
+    <color name="text_primary_dark">#FFFFFFFF</color>
+    <color name="text_secondary">#8A000000</color>
+    <color name="text_secondary_dark">#B3FFFFFF</color>
+    <color name="trigger_battery">#FFFF5722</color>
+    <color name="trigger_bluetooth">#FF9C27B0</color>
+    <color name="trigger_location">#FF2196F3</color>
+    <color name="trigger_screen">#FFFF9800</color>
+    <color name="trigger_sms">#FF4CAF50</color>
+    <color name="trigger_time">#FF6200EE</color>
+    <color name="trigger_wifi">#FF00BCD4</color>
+    <color name="warning">#FFFF9800</color>
     <color name="white">#FFFFFFFF</color>
     <string name="action_count">个动作</string>
     <string name="action_help">帮助</string>
@@ -44,6 +73,11 @@
     <string name="any_content">任意内容</string>
     <string name="any_number">任意号码</string>
     <string name="app_name">TriggerFlow</string>
+    <string name="battery_above_level">电量高于</string>
+    <string name="battery_below_level">电量低于</string>
+    <string name="battery_charging">开始充电</string>
+    <string name="battery_discharging">停止充电</string>
+    <string name="battery_level_format">电量: %d%%</string>
     <string name="battery_trigger">电池触发器</string>
     <string name="bluetooth">蓝牙</string>
     <string name="bluetooth_action">蓝牙操作</string>
@@ -51,6 +85,7 @@
     <string name="brightness">亮度</string>
     <string name="brightness_level_range">亮度级别 (0-100)</string>
     <string name="cancel">取消</string>
+    <string name="choose_trigger_description">选择一个类型来开始创建你的自动化规则</string>
     <string name="clear_log_message">确定要清空所有触发记录吗？</string>
     <string name="clear_log_title">清空记录</string>
     <string name="clear_logs">清空记录</string>
@@ -80,6 +115,7 @@
     <string name="enable_wifi">启用WiFi</string>
     <string name="enabled">已启用</string>
     <string name="enter_name">请输入名称</string>
+    <string name="help_title">使用帮助</string>
     <string name="launch_app">启动应用</string>
     <string name="level">级别</string>
     <string name="location_trigger">位置触发器</string>
@@ -90,6 +126,7 @@
     <string name="media">媒体</string>
     <string name="new_macro">新建宏</string>
     <string name="no_actions">暂无动作</string>
+    <string name="no_macros">还没有创建任何宏</string>
     <string name="no_trigger_logs">暂无触发记录</string>
     <string name="no_triggers">暂无触发器</string>
     <string name="notification">通知</string>
@@ -97,6 +134,7 @@
     <string name="notification_content">通知内容</string>
     <string name="notification_title">通知标题</string>
     <string name="notification_volume">通知</string>
+    <string name="permission_guide">权限说明</string>
     <string name="remove">移除</string>
     <string name="ringtone">铃声</string>
     <string name="save_macro">保存宏</string>
@@ -124,12 +162,14 @@
     <string name="sms_trigger">短信触发器</string>
     <string name="sms_trigger_description">当收到特定号码的短信且包含特定内容时触发</string>
     <string name="take_screenshot">截图</string>
+    <string name="tap_to_add_macro">点击下方按钮开始创建第一个宏</string>
     <string name="time_trigger">时间触发器</string>
     <string name="title">标题</string>
     <string name="toggle">切换</string>
     <string name="toggle_bluetooth">切换蓝牙</string>
     <string name="toggle_data">切换数据</string>
     <string name="toggle_wifi">切换WiFi</string>
+    <string name="trigger_condition">触发条件</string>
     <string name="trigger_count">个触发器</string>
     <string name="trigger_list">触发器列表</string>
     <string name="trigger_log_title">触发记录</string>
@@ -145,7 +185,12 @@
     <string name="wifi_action">WiFi操作</string>
     <string name="wifi_trigger">WiFi触发器</string>
     <string name="xiaomi_permission_guide">小米权限设置</string>
-    <style name="Theme.MacroDroid" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="ActionChipStyle" parent="Widget.MaterialComponents.Chip.Action">
+        <item name="chipCornerRadius">16dp</item>
+        <item name="chipBackgroundColor">@color/accent</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="Theme.MacroDroid" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryDark">@color/primary_dark</item>
         <item name="colorAccent">@color/accent</item>
@@ -157,5 +202,18 @@
         <item name="colorOnBackground">@color/on_background</item>
         <item name="colorOnSurface">@color/on_surface</item>
         <item name="colorOnError">@color/on_error</item>
+
+        
+        <item name="cardViewStyle">@style/Widget.MacroDroid.CardView</item>
+    </style>
+    <style name="TriggerChipStyle" parent="Widget.MaterialComponents.Chip.Action">
+        <item name="chipCornerRadius">16dp</item>
+        <item name="chipBackgroundColor">@color/primary_light</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="Widget.MacroDroid.CardView" parent="Widget.MaterialComponents.CardView">
+        <item name="cardCornerRadius">12dp</item>
+        <item name="cardElevation">4dp</item>
+        <item name="cardBackgroundColor">@color/card_background</item>
     </style>
 </resources>

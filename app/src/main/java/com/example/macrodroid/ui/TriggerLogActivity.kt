@@ -1,7 +1,6 @@
 package com.example.macrodroid.ui
 
 import android.os.Bundle
-import android.view.MenuItem
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
@@ -21,6 +20,8 @@ class TriggerLogActivity : AppCompatActivity() {
         binding = ActivityTriggerLogBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Setup Toolbar
+        setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = getString(R.string.trigger_log_title)
 
@@ -71,13 +72,5 @@ class TriggerLogActivity : AppCompatActivity() {
             }
             .setNegativeButton(android.R.string.cancel, null)
             .show()
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == android.R.id.home) {
-            onBackPressedDispatcher.onBackPressed()
-            return true
-        }
-        return super.onOptionsItemSelected(item)
     }
 }

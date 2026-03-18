@@ -1,114 +1,118 @@
 [
     {
-        "merged": "com.example.macrodroid.app-debug-42:/layout_activity_action_selection.xml.flat",
-        "source": "com.example.macrodroid.app-main-44:/layout/activity_action_selection.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-debug-42:\\mipmap-xxxhdpi_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-main-44:\\mipmap-xxxhdpi\\ic_launcher_round.xml"
     },
     {
-        "merged": "com.example.macrodroid.app-debug-42:/mipmap-xhdpi_ic_launcher.xml.flat",
-        "source": "com.example.macrodroid.app-main-44:/mipmap-xhdpi/ic_launcher.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-debug-42:\\layout_dialog_volume.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-main-44:\\layout\\dialog_volume.xml"
     },
     {
-        "merged": "com.example.macrodroid.app-debug-42:/mipmap-xxhdpi_ic_launcher_round.xml.flat",
-        "source": "com.example.macrodroid.app-main-44:/mipmap-xxhdpi/ic_launcher_round.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-debug-42:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-main-44:\\drawable\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "com.example.macrodroid.app-debug-42:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.example.macrodroid.app-main-44:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-debug-42:\\mipmap-hdpi_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-main-44:\\mipmap-hdpi\\ic_launcher_round.xml"
     },
     {
-        "merged": "com.example.macrodroid.app-debug-42:/layout_dialog_sms_trigger.xml.flat",
-        "source": "com.example.macrodroid.app-main-44:/layout/dialog_sms_trigger.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-debug-42:\\mipmap-mdpi_ic_launcher.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-main-44:\\mipmap-mdpi\\ic_launcher.xml"
     },
     {
-        "merged": "com.example.macrodroid.app-debug-42:/layout_item_trigger_action.xml.flat",
-        "source": "com.example.macrodroid.app-main-44:/layout/item_trigger_action.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-debug-42:\\mipmap-xhdpi_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-main-44:\\mipmap-xhdpi\\ic_launcher_round.xml"
     },
     {
-        "merged": "com.example.macrodroid.app-debug-42:/layout_item_trigger_log.xml.flat",
-        "source": "com.example.macrodroid.app-main-44:/layout/item_trigger_log.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-debug-42:\\layout_dialog_brightness.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-main-44:\\layout\\dialog_brightness.xml"
     },
     {
-        "merged": "com.example.macrodroid.app-debug-42:/menu_bottom_nav_menu.xml.flat",
-        "source": "com.example.macrodroid.app-main-44:/menu/bottom_nav_menu.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-debug-42:\\layout_item_trigger_log.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-main-44:\\layout\\item_trigger_log.xml"
     },
     {
-        "merged": "com.example.macrodroid.app-debug-42:/mipmap-xxhdpi_ic_launcher.xml.flat",
-        "source": "com.example.macrodroid.app-main-44:/mipmap-xxhdpi/ic_launcher.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-debug-42:\\mipmap-xxhdpi_ic_launcher.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-main-44:\\mipmap-xxhdpi\\ic_launcher.xml"
     },
     {
-        "merged": "com.example.macrodroid.app-debug-42:/mipmap-hdpi_ic_launcher.xml.flat",
-        "source": "com.example.macrodroid.app-main-44:/mipmap-hdpi/ic_launcher.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-debug-42:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-main-44:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "com.example.macrodroid.app-debug-42:/mipmap-xxxhdpi_ic_launcher_round.xml.flat",
-        "source": "com.example.macrodroid.app-main-44:/mipmap-xxxhdpi/ic_launcher_round.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-debug-42:\\mipmap-xxxhdpi_ic_launcher.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-main-44:\\mipmap-xxxhdpi\\ic_launcher.xml"
     },
     {
-        "merged": "com.example.macrodroid.app-debug-42:/drawable_ic_launcher_foreground.xml.flat",
-        "source": "com.example.macrodroid.app-main-44:/drawable/ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-debug-42:\\mipmap-xxhdpi_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-main-44:\\mipmap-xxhdpi\\ic_launcher_round.xml"
     },
     {
-        "merged": "com.example.macrodroid.app-debug-42:/layout_activity_xiaomi_permission_guide.xml.flat",
-        "source": "com.example.macrodroid.app-main-44:/layout/activity_xiaomi_permission_guide.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-debug-42:\\mipmap-mdpi_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-main-44:\\mipmap-mdpi\\ic_launcher_round.xml"
     },
     {
-        "merged": "com.example.macrodroid.app-debug-42:/layout_activity_main.xml.flat",
-        "source": "com.example.macrodroid.app-main-44:/layout/activity_main.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-debug-42:\\layout_activity_trigger_log.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-main-44:\\layout\\activity_trigger_log.xml"
     },
     {
-        "merged": "com.example.macrodroid.app-debug-42:/layout_activity_macro_detail.xml.flat",
-        "source": "com.example.macrodroid.app-main-44:/layout/activity_macro_detail.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-debug-42:\\mipmap-hdpi_ic_launcher.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-main-44:\\mipmap-hdpi\\ic_launcher.xml"
     },
     {
-        "merged": "com.example.macrodroid.app-debug-42:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.example.macrodroid.app-main-44:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-debug-42:\\layout_dialog_sms_trigger.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-main-44:\\layout\\dialog_sms_trigger.xml"
     },
     {
-        "merged": "com.example.macrodroid.app-debug-42:/layout_dialog_brightness.xml.flat",
-        "source": "com.example.macrodroid.app-main-44:/layout/dialog_brightness.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-debug-42:\\layout_activity_macro_detail.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-main-44:\\layout\\activity_macro_detail.xml"
     },
     {
-        "merged": "com.example.macrodroid.app-debug-42:/mipmap-hdpi_ic_launcher_round.xml.flat",
-        "source": "com.example.macrodroid.app-main-44:/mipmap-hdpi/ic_launcher_round.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-debug-42:\\layout_dialog_notification.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-main-44:\\layout\\dialog_notification.xml"
     },
     {
-        "merged": "com.example.macrodroid.app-debug-42:/layout_item_macro.xml.flat",
-        "source": "com.example.macrodroid.app-main-44:/layout/item_macro.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-debug-42:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-main-44:\\layout\\activity_main.xml"
     },
     {
-        "merged": "com.example.macrodroid.app-debug-42:/mipmap-xxxhdpi_ic_launcher.xml.flat",
-        "source": "com.example.macrodroid.app-main-44:/mipmap-xxxhdpi/ic_launcher.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-debug-42:\\mipmap-xhdpi_ic_launcher.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-main-44:\\mipmap-xhdpi\\ic_launcher.xml"
     },
     {
-        "merged": "com.example.macrodroid.app-debug-42:/mipmap-mdpi_ic_launcher_round.xml.flat",
-        "source": "com.example.macrodroid.app-main-44:/mipmap-mdpi/ic_launcher_round.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-debug-42:\\layout_activity_trigger_selection.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-main-44:\\layout\\activity_trigger_selection.xml"
     },
     {
-        "merged": "com.example.macrodroid.app-debug-42:/layout_dialog_notification.xml.flat",
-        "source": "com.example.macrodroid.app-main-44:/layout/dialog_notification.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-debug-42:\\layout_item_macro.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-main-44:\\layout\\item_macro.xml"
     },
     {
-        "merged": "com.example.macrodroid.app-debug-42:/layout_activity_trigger_selection.xml.flat",
-        "source": "com.example.macrodroid.app-main-44:/layout/activity_trigger_selection.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-debug-42:\\layout_item_trigger_action.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-main-44:\\layout\\item_trigger_action.xml"
     },
     {
-        "merged": "com.example.macrodroid.app-debug-42:/layout_activity_trigger_log.xml.flat",
-        "source": "com.example.macrodroid.app-main-44:/layout/activity_trigger_log.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-debug-42:\\layout_activity_xiaomi_permission_guide.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-main-44:\\layout\\activity_xiaomi_permission_guide.xml"
     },
     {
-        "merged": "com.example.macrodroid.app-debug-42:/mipmap-mdpi_ic_launcher.xml.flat",
-        "source": "com.example.macrodroid.app-main-44:/mipmap-mdpi/ic_launcher.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-debug-42:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-main-44:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "com.example.macrodroid.app-debug-42:/mipmap-xhdpi_ic_launcher_round.xml.flat",
-        "source": "com.example.macrodroid.app-main-44:/mipmap-xhdpi/ic_launcher_round.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-debug-42:\\menu_bottom_nav_menu.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-main-44:\\menu\\bottom_nav_menu.xml"
     },
     {
-        "merged": "com.example.macrodroid.app-debug-42:/layout_dialog_volume.xml.flat",
-        "source": "com.example.macrodroid.app-main-44:/layout/dialog_volume.xml"
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-debug-42:\\menu_menu_main.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-main-44:\\menu\\menu_main.xml"
     },
     {
         "merged": "com.example.macrodroid.app-debug-42:/menu_menu_main.xml.flat",
         "source": "com.example.macrodroid.app-main-44:/menu/menu_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-debug-42:\\layout_activity_action_selection.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\9.0.0\\com.example.macrodroid.app-main-44:\\layout\\activity_action_selection.xml"
     }
 ]

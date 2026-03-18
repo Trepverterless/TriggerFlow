@@ -2,12 +2,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/action_xiaomi_guide"
-        android:title="@string/xiaomi_permission_guide"
-        app:showAsAction="never" />
-    <item
-        android:id="@+id/action_settings"
-        android:title="@string/action_settings"
+        android:id="@+id/action_permission_guide"
+        android:title="@string/permission_guide"
         app:showAsAction="never" />
     <item
         android:id="@+id/action_help"
